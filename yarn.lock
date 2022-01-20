@@ -5476,13 +5476,13 @@
     "@types/glob" "*"
     "@types/node" "*"
 
-"@types/rollup-plugin-visualizer@2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@types/rollup-plugin-visualizer/-/rollup-plugin-visualizer-2.6.0.tgz#e5953994362b8d89e5fef0ea0c00c6cd316eac2e"
-  integrity sha512-mkKdL1Dst0w48gHMdS5dcVrJfRRFdxIVeesdUXUlxobQD6hqV5C6v0pUHgsDQrObWewRmHJdTNKNT6oe6Pejhw==
+"@types/rollup-plugin-visualizer@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@types/rollup-plugin-visualizer/-/rollup-plugin-visualizer-4.2.1.tgz#84b317bcb218b4e35dd9f529f2e379e373935a27"
+  integrity sha512-Fk4y0EgmsSbvbayYhtSI9+cGvgw1rcQ9RlbExkQt4ivXRdiEwFKuRpxNuJCr0JktXIvOPUuPR7GSmtyZu0dujQ==
   dependencies:
     "@types/node" "*"
-    rollup "^0.63.4"
+    rollup "^2.42.3"
 
 "@types/semver@^6.0.0":
   version "6.0.2"
@@ -21291,13 +21291,12 @@ rollup@2.33.3:
   optionalDependencies:
     fsevents "~2.1.2"
 
-rollup@^0.63.4:
-  version "0.63.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.63.5.tgz#5543eecac9a1b83b7e1be598b5be84c9c0a089db"
-  integrity sha512-dFf8LpUNzIj3oE0vCvobX6rqOzHzLBoblyFp+3znPbjiSmSvOoK2kMKx+Fv9jYduG1rvcCfCveSgEaQHjWRF6g==
-  dependencies:
-    "@types/estree" "0.0.39"
-    "@types/node" "*"
+rollup@^2.42.3:
+  version "2.64.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.64.0.tgz#f0f59774e21fbb56de438a37d06a2189632b207a"
+  integrity sha512-+c+lbw1lexBKSMb1yxGDVfJ+vchJH3qLbmavR+awDinTDA2C5Ug9u7lkOzj62SCu0PKUExsW36tpgW7Fmpn3yQ==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 rst-selector-parser@^2.2.3:
   version "2.2.3"
