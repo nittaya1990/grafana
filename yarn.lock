@@ -3075,6 +3075,11 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-0.23.0.tgz#ec1467fd71f6551628b60cd2107acc923b9b77cc"
   integrity sha512-Tzo+VGR1zlzLbjVI+7mlDJ2xuaUsue4scWvFlK+fzcUfn9siF4NWbxoC2X6Br2B/g4dsq1OAwAYsPVYIEoY2rQ==
 
+"@opentelemetry/semantic-conventions@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.1.0.tgz#43f23a0892affdd4809a1a41396b25be919cc84a"
+  integrity sha512-GzmijkVr3T00+VSeKBVK0uoVMSkmxUD6x6GQ3ZTBLDVYc9RCsr40KGdnPWZ5RdKl+/1mfrpthRSrzpfVUikKbA==
+
 "@opentelemetry/tracing@0.23.0":
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/tracing/-/tracing-0.23.0.tgz#bf80a987f57508f2202170f4f2bc4385988ecb02"
