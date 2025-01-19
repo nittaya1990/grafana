@@ -1,10 +1,12 @@
 import { FieldColorModeId, FieldConfigProperty, PanelPlugin } from '@grafana/data';
-import { StatusHistoryPanel } from './StatusHistoryPanel';
-import { StatusPanelOptions, StatusFieldConfig, defaultStatusFieldConfig } from './types';
 import { VisibilityMode } from '@grafana/schema';
 import { commonOptionsBuilder } from '@grafana/ui';
 
-export const plugin = new PanelPlugin<StatusPanelOptions, StatusFieldConfig>(StatusHistoryPanel)
+import { StatusHistoryPanel } from './StatusHistoryPanel';
+import { Options, FieldConfig, defaultFieldConfig } from './panelcfg.gen';
+import { StatusHistorySuggestionsSupplier } from './suggestions';
+
+export const plugin = new PanelPlugin<Options, FieldConfig>(StatusHistoryPanel)
   .useFieldConfig({
     standardOptions: {
       [FieldConfigProperty.Color]: {
@@ -21,7 +23,7 @@ export const plugin = new PanelPlugin<StatusPanelOptions, StatusFieldConfig>(Sta
         .addSliderInput({
           path: 'lineWidth',
           name: 'Line width',
-          defaultValue: defaultStatusFieldConfig.lineWidth,
+          defaultValue: defaultFieldConfig.lineWidth,
           settings: {
             min: 0,
             max: 10,
@@ -31,13 +33,15 @@ export const plugin = new PanelPlugin<StatusPanelOptions, StatusFieldConfig>(Sta
         .addSliderInput({
           path: 'fillOpacity',
           name: 'Fill opacity',
-          defaultValue: defaultStatusFieldConfig.fillOpacity,
+          defaultValue: defaultFieldConfig.fillOpacity,
           settings: {
             min: 0,
             max: 100,
             step: 1,
           },
         });
+
+      commonOptionsBuilder.addHideFrom(builder);
     },
   })
   .setPanelOptions((builder) => {
@@ -76,5 +80,7 @@ export const plugin = new PanelPlugin<StatusPanelOptions, StatusFieldConfig>(Sta
       });
 
     commonOptionsBuilder.addLegendOptions(builder, false);
-    commonOptionsBuilder.addTooltipOptions(builder, true);
-  });
+    commonOptionsBuilder.addTooltipOptions(builder);
+  })
+  .setSuggestionsSupplier(new StatusHistorySuggestionsSupplier())
+  .setDataSupport({ annotations: true });
